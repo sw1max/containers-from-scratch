@@ -50,7 +50,7 @@ func child() {
 	cmd.Stderr = os.Stderr
 	cmd.SysProcAttr = &syscall.SysProcAttr{
 		Cloneflags:   syscall.CLONE_NEWUTS | syscall.CLONE_NEWPID | syscall.CLONE_NEWNS,
-		Unsahreflags: syscall.CLONE_NEWNS,
+		Unshareflags: syscall.CLONE_NEWNS,
 	}
 
 	cmd.Run()
